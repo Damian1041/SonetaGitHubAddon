@@ -12,14 +12,13 @@ namespace SonetaRekrutacja.GitHubInteractivity
         private const string _baseUrl = "https://api.github.com/repos/Damian1041/SonetaRekrutacja/";
         private const string _acceptType = "application/vnd.github.v3+json";
         private const string _agentName = "Soneta App";
-        private const string _token = "181b9eb7f3c07937fba6107202a1df34b0a488f4";
+
 
         private string GetWebResponse(string uri)
         {
             var request = (HttpWebRequest)WebRequest.Create(uri);
             request.Accept = _acceptType;
             request.UserAgent = _agentName;
-            request.Headers.Add(HttpRequestHeader.Authorization, string.Concat("token ", _token));
 
             ///TODO handle possible web request errors ( Not sure how to pass error to Enova UI )
             WebResponse webResponse = request.GetResponse();
