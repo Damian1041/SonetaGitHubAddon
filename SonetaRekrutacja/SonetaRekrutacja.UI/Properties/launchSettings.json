@@ -1,0 +1,13 @@
+
+{
+  "profiles": {
+    "SonetaRekrutacja.UI": {
+      "commandName": "Project"
+    },
+    "RunWithEnova": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files (x86)\\Soneta\\enova365 2001.0.2.17824\\SonetaExplorer.exe",
+      "commandLineArgs": "/extpath=\"C:\\Program Files (x86)\\Common Files\\Soneta\\Assemblies\\net46\""
+    }
+  }
+}

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<DataForm xmlns="http://www.enova.pl/schema/form.xsd" Priority="100">
+  <Page CaptionHtml="Zestawienie danych z git" DataContext="{DataSource}">
+    
+    <Group CaptionHtml="średnia ilość commit-ów dodawanych przez daną osobę dziennie">
+      <Row>
+        <Stack Width="*" Height="10">
+          <Grid EditValue="{AverageCommits}" Width="*" Height="*" RemoveButton="None" EditButton="None" NewButton="None" IsToolbarVisible="false">
+            <Field CaptionHtml="Autor" Width="50" EditValue="{Author}" />
+            <Field CaptionHtml="Commity Dziennie" Width="50" EditValue="{AverageCommits}" />
+          </Grid>
+        </Stack>
+      </Row>
+    </Group>
+
+    <Group CaptionHtml="ilość commit-ów, które dana osoba wprowadziła danego dnia">
+      <Row>
+        <Stack Width="*" Height="10">
+          <Grid EditValue="{DailyCommits}" Width="*" Height="*" RemoveButton="None" EditButton="None" NewButton="None" IsToolbarVisible="false">
+            <Field CaptionHtml="Dzien" Width="20" EditValue="{Data}" />
+            <Field CaptionHtml="Autor" Width="40" EditValue="{Author}" />
+            <Field CaptionHtml="Ilosc Commit'ów" Width="40" EditValue="{CommitsCount}" />
+          </Grid>
+        </Stack>
+      </Row>
+    </Group>
+
+    <Stack Width="*">
+      <Command CaptionHtml="Pobierz z git'a" MethodName="Download"/>
+    </Stack>
+    
+  </Page>
+</DataForm>
